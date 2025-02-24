@@ -7,8 +7,10 @@ import { styled } from '@mui/material/styles';
 import React from 'react';
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.main,
-  color: theme.palette.primary.contrastText,
+  // backgroundColor: theme.palette.primary.main,
+  backgroundColor: theme.palette.background.default,
+  // color: theme.palette.primary.contrastText,
+  color: theme.palette.text.primary,
   width: '98%', // Use percentage for width
   maxWidth: '1200px', // Add a maximum width
   borderRadius: '10px', // Add border radius

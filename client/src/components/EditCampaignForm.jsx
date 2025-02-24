@@ -6,14 +6,20 @@ import CustomSelectField from './CustomSelectField';
 import { styled } from '@mui/material/styles';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const FormContainer = styled('form')({
+const FormContainer = styled('form')(({ theme }) => ({
   backgroundColor: '#fff',
+  color: theme.palette.text.primary,
   padding: '20px',
   borderRadius: '8px',
   boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
   marginBottom: '20px',
   maxWidth: '400px',
   margin: '0 auto',
+}));
+
+const StyledGridItem = styled(Grid2)({
+  justifyContent: 'flex-start', // Align items to the left
+  display: 'flex',
 });
 
 function EditCampaignForm() {
@@ -197,7 +203,7 @@ function EditCampaignForm() {
         <Grid2 item>
           <Typography variant="h5">Edit Campaign</Typography>
         </Grid2>
-        <Grid2 item>
+        <StyledGridItem item>
           <CustomTextField
             label="Title"
             type="text"
@@ -206,8 +212,8 @@ function EditCampaignForm() {
             error={!!titleError}
             helperText={titleError}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomTextField
             label="Description"
             multiline
@@ -217,8 +223,8 @@ function EditCampaignForm() {
             error={!!descriptionError}
             helperText={descriptionError}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomTextField
             label="Goal"
             type="number"
@@ -227,8 +233,8 @@ function EditCampaignForm() {
             error={!!goalError}
             helperText={goalError}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomSelectField
             labelId="category-label"
             id="category"
@@ -239,8 +245,8 @@ function EditCampaignForm() {
             helperText={categoryError}
             menuItems={categoryMenuItems}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomTextField
             label="Start Date"
             type="date"
@@ -249,8 +255,8 @@ function EditCampaignForm() {
             error={!!startDateError}
             helperText={startDateError}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomTextField
             label="End Date"
             type="date"
@@ -259,8 +265,8 @@ function EditCampaignForm() {
             error={!!endDateError}
             helperText={endDateError}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomTextField
             label="Image/Video URL"
             type="text"
@@ -269,7 +275,7 @@ function EditCampaignForm() {
             error={!!imageVideoURLError}
             helperText={imageVideoURLError}
           />
-        </Grid2>
+        </StyledGridItem>
         <Grid2 item>
           <Button variant="contained" color="primary" type="submit">
             Update

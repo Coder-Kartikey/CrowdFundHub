@@ -8,6 +8,7 @@ export const mockCampaigns = [
     startDate: '2025-03-01',
     endDate: '2025-06-30',
     goal: 50000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?coding,education',
   },
   {
@@ -19,6 +20,7 @@ export const mockCampaigns = [
     startDate: '2025-02-15',
     endDate: '2025-05-15',
     goal: 75000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?cleanwater,africa',
   },
   {
@@ -30,6 +32,7 @@ export const mockCampaigns = [
     startDate: '2025-04-01',
     endDate: '2025-12-31',
     goal: 100000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?cancerresearch,medical',
   },
   {
@@ -41,6 +44,7 @@ export const mockCampaigns = [
     startDate: '2025-03-15',
     endDate: '2025-09-15',
     goal: 30000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?localartists,music',
   },
   {
@@ -52,6 +56,7 @@ export const mockCampaigns = [
     startDate: '2025-05-01',
     endDate: '2025-11-30',
     goal: 80000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?amazonrainforest,conservation',
   },
   {
@@ -63,6 +68,7 @@ export const mockCampaigns = [
     startDate: '2025-01-10',
     endDate: '2025-04-10',
     goal: 20000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?youthsports,equipment',
   },
   {
@@ -74,6 +80,7 @@ export const mockCampaigns = [
     startDate: '2025-02-20',
     endDate: '2025-08-20',
     goal: 40000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?elderlycare,companionship',
   },
   {
@@ -96,6 +103,7 @@ export const mockCampaigns = [
     startDate: '2025-03-01',
     endDate: '2025-09-30',
     goal: 55000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?mentalhealth,awareness',
   },
   {
@@ -107,6 +115,7 @@ export const mockCampaigns = [
     startDate: '2025-05-10',
     endDate: '2025-11-10',
     goal: 25000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?communitygarden,urban',
   },
   {
@@ -118,6 +127,7 @@ export const mockCampaigns = [
     startDate: '2025-01-01',
     endDate: '2025-07-01',
     goal: 120000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?earthquake,disasterrelief',
   },
   {
@@ -129,6 +139,7 @@ export const mockCampaigns = [
     startDate: '2025-02-01',
     endDate: '2025-08-01',
     goal: 90000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?womenincoding,bootcamps',
   },
   {
@@ -140,6 +151,7 @@ export const mockCampaigns = [
     startDate: '2025-03-15',
     endDate: '2025-09-15',
     goal: 45000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?eyeexams,children',
   },
   {
@@ -151,6 +163,7 @@ export const mockCampaigns = [
     startDate: '2025-04-01',
     endDate: '2025-10-01',
     goal: 70000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?historicallandmarks,preservation',
   },
   {
@@ -162,6 +175,7 @@ export const mockCampaigns = [
     startDate: '2025-05-15',
     endDate: '2025-11-15',
     goal: 95000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
   },
   {
@@ -173,6 +187,7 @@ export const mockCampaigns = [
     startDate: '2025-06-01',
     endDate: '2025-12-01',
     goal: 60000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?sustainablefarming',
   },
   {
@@ -184,6 +199,7 @@ export const mockCampaigns = [
     startDate: '2025-07-01',
     endDate: '2026-01-01',
     goal: 55000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?schoolmeals',
   },
   {
@@ -195,6 +211,7 @@ export const mockCampaigns = [
     startDate: '2025-08-01',
     endDate: '2026-02-01',
     goal: 70000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?rurallibraries',
   },
   {
@@ -206,6 +223,7 @@ export const mockCampaigns = [
     startDate: '2025-09-01',
     endDate: '2026-03-01',
     goal: 40000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?animalshelters',
   },
   {
@@ -217,6 +235,7 @@ export const mockCampaigns = [
     startDate: '2025-10-01',
     endDate: '2026-04-01',
     goal: 80000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?renewableenergy,urban',
   },
   {
@@ -228,6 +247,7 @@ export const mockCampaigns = [
     startDate: '2025-11-01',
     endDate: '2026-05-01',
     goal: 65000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?vocationaltraining',
   },
   {
@@ -239,6 +259,7 @@ export const mockCampaigns = [
     startDate: '2025-12-01',
     endDate: '2026-06-01',
     goal: 90000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?alzheimersresearch',
   },
   {
@@ -250,6 +271,7 @@ export const mockCampaigns = [
     startDate: '2026-01-01',
     endDate: '2026-07-01',
     goal: 50000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?accessibleplaygrounds',
   },
   {
@@ -261,6 +283,7 @@ export const mockCampaigns = [
     startDate: '2026-02-01',
     endDate: '2026-08-01',
     goal: 75000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?sustainabletourism',
   },
   {
@@ -272,6 +295,7 @@ export const mockCampaigns = [
     startDate: '2026-03-01',
     endDate: '2026-09-01',
     goal: 40000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?digitalliteracy',
   },
   {
@@ -283,6 +307,7 @@ export const mockCampaigns = [
     startDate: '2026-04-01',
     endDate: '2026-10-01',
     goal: 100000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?childhoodcancerresearch',
   },
   {
@@ -294,6 +319,7 @@ export const mockCampaigns = [
     startDate: '2026-05-01',
     endDate: '2026-11-01',
     goal: 80000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?schoolbuilding',
   },
   {
@@ -305,6 +331,7 @@ export const mockCampaigns = [
     startDate: '2026-06-01',
     endDate: '2026-12-01',
     goal: 90000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?endangeredspecies',
   },
   {
@@ -316,6 +343,7 @@ export const mockCampaigns = [
     startDate: '2026-07-01',
     endDate: '2027-01-01',
     goal: 60000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?cleanenergy,hospitals',
   },
   {
@@ -327,6 +355,7 @@ export const mockCampaigns = [
     startDate: '2026-08-01',
     endDate: '2027-02-01',
     goal: 35000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?farmersmarket',
   },
   {
@@ -338,6 +367,7 @@ export const mockCampaigns = [
     startDate: '2026-09-01',
     endDate: '2027-03-01',
     goal: 70000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?assistivetechnology',
   },
   {
@@ -349,6 +379,7 @@ export const mockCampaigns = [
     startDate: '2026-10-01',
     endDate: '2027-04-01',
     goal: 85000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?heartdiseaseresearch',
   },
   {
@@ -360,6 +391,7 @@ export const mockCampaigns = [
     startDate: '2026-11-01',
     endDate: '2027-05-01',
     goal: 55000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?afterschoolprograms',
   },
   {
@@ -371,6 +403,7 @@ export const mockCampaigns = [
     startDate: '2026-12-01',
     endDate: '2027-06-01',
     goal: 95000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?coralreefconservation',
   },
   {
@@ -382,6 +415,7 @@ export const mockCampaigns = [
     startDate: '2027-01-01',
     endDate: '2027-07-01',
     goal: 70000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?veteransmentalhealth',
   },
   {
@@ -393,6 +427,7 @@ export const mockCampaigns = [
     startDate: '2027-02-01',
     endDate: '2027-08-01',
     goal: 40000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?urbanfarming',
   },
   {
@@ -404,6 +439,7 @@ export const mockCampaigns = [
     startDate: '2027-03-01',
     endDate: '2027-09-01',
     goal: 65000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?cybersecurityawareness',
   },
   {
@@ -415,6 +451,7 @@ export const mockCampaigns = [
     startDate: '2027-04-01',
     endDate: '2027-10-01',
     goal: 80000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?diabetesresearch',
   },
   {
@@ -426,6 +463,7 @@ export const mockCampaigns = [
     startDate: '2027-05-01',
     endDate: '2027-11-01',
     goal: 50000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?refugeechildreneducation',
   },
   {
@@ -437,6 +475,7 @@ export const mockCampaigns = [
     startDate: '2027-06-01',
     endDate: '2027-12-01',
     goal: 90000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?rainforestconservation',
   },
    {
@@ -448,6 +487,7 @@ export const mockCampaigns = [
     startDate: '2025-06-01',
     endDate: '2025-12-31',
     goal: 65000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?Indigenous,support',
   },
   {
@@ -459,6 +499,7 @@ export const mockCampaigns = [
     startDate: '2025-07-15',
     endDate: '2026-01-15',
     goal: 85000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?renewableenergy,farms',
   },
   {
@@ -470,6 +511,7 @@ export const mockCampaigns = [
     startDate: '2025-08-01',
     endDate: '2026-02-28',
     goal: 50000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?freementalcare,lowincome',
   },
   {
@@ -481,6 +523,7 @@ export const mockCampaigns = [
     startDate: '2025-09-10',
     endDate: '2026-03-10',
     goal: 35000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?music,schools',
   },
   {
@@ -492,6 +535,7 @@ export const mockCampaigns = [
     startDate: '2025-10-01',
     endDate: '2026-04-30',
     goal: 95000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://source.unsplash.com/400x225/?wildlifeprotection,ocean',
   },
   {
@@ -502,6 +546,7 @@ export const mockCampaigns = [
     startDate: '2024-06-01',
     endDate: '2024-06-30',
     goal: 6000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://via.placeholder.com/400x225',
   },
   {
@@ -512,6 +557,7 @@ export const mockCampaigns = [
     startDate: '2024-07-01',
     endDate: '2024-07-31',
     goal: 7000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://via.placeholder.com/400x225',
   },
   {
@@ -522,6 +568,7 @@ export const mockCampaigns = [
     startDate: '2024-08-01',
     endDate: '2024-08-31',
     goal: 8000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://via.placeholder.com/400x225',
   },
   {
@@ -532,6 +579,7 @@ export const mockCampaigns = [
     startDate: '2024-09-01',
     endDate: '2024-09-30',
     goal: 9000,
+    creator: 'pkartikey5757@gmail.com',
     imageVideoURL: 'https://via.placeholder.com/400x225',
   },
   {
@@ -542,6 +590,7 @@ export const mockCampaigns = [
     startDate: '2024-10-01',
     endDate: '2024-10-31',
     goal: 10000,
+    creator: 'pkartikey6391@gmail.com',
     imageVideoURL: 'https://via.placeholder.com/400x225',
   },
 ];

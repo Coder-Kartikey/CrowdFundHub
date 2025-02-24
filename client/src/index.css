@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* .compensate-for-scrollbar {
+  padding-right: 17px;
+} */
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -28,6 +32,8 @@ html, body { /* Apply to both html and body */
   flex-direction: column; /* Add flex direction */
   min-width: 320px;
   min-height: 100vh;
+  /* scrollbar-width: thin; */
+  /* overflow: overlay; */
 }
 
 #root {

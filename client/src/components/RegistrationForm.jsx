@@ -83,9 +83,9 @@ function RegistrationForm() {
   return (
     <form onSubmit={handleSubmit}>
       <Grid2 container spacing={2} direction="column" maxWidth="400px">
-        <Grid2 item>
+        {/* <Grid2 item>
           <Typography variant="h5">Register</Typography>
-        </Grid2>
+        </Grid2> */}
         <Grid2 item>
           <StyledTextField
             fullWidth

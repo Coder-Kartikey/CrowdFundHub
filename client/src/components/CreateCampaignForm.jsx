@@ -1,19 +1,27 @@
 import { useState } from 'react';
-import { Button, Typography, Alert } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, IconButton, Box } from '@mui/material';
 import { Grid2 } from '@mui/material';
 import CustomTextField from './CustomTextField'; // Import CustomTextField
 import CustomSelectField from './CustomSelectField'; // Import CustomSelectField
+import CustomDatePicker from './CustomDatePicker'; // Import CustomDatePicker
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 
-const FormContainer = styled('form')({
+const FormContainer = styled('form')(({ theme }) => ({
   backgroundColor: '#fff',
+  color: theme.palette.text.primary,
   padding: '20px',
   borderRadius: '8px',
   boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
   marginBottom: '20px',
   maxWidth: '400px',
   margin: '0 auto',
+}));
+
+const StyledGridItem = styled(Grid2)({
+  justifyContent: 'flex-start', // Align items to the left
+  display: 'flex',
 });
 
 function CreateCampaignForm() {
@@ -123,6 +131,7 @@ function CreateCampaignForm() {
         startDate,
         endDate,
         imageVideoURL,
+        creator: localStorage.getItem('userEmail'), // Add creator email
       };
 
       // Get existing campaigns from local storage
@@ -176,7 +185,7 @@ function CreateCampaignForm() {
         <Grid2 item>
           <Typography variant="h5">Create Campaign</Typography>
         </Grid2>
-        <Grid2 item>
+        <StyledGridItem item>
           <CustomTextField
             label="Title"
             type="text"
@@ -185,8 +194,8 @@ function CreateCampaignForm() {
             error={!!titleError}
             helperText={titleError}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomTextField
             label="Description"
             multiline
@@ -196,8 +205,8 @@ function CreateCampaignForm() {
             error={!!descriptionError}
             helperText={descriptionError}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomTextField
             label="Goal"
             type="number"
@@ -206,8 +215,8 @@ function CreateCampaignForm() {
             error={!!goalError}
             helperText={goalError}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomSelectField
             labelId="category-label"
             id="category"
@@ -218,8 +227,8 @@ function CreateCampaignForm() {
             helperText={categoryError}
             menuItems={categoryMenuItems}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomTextField
             label="Start Date"
             type="date"
@@ -228,8 +237,8 @@ function CreateCampaignForm() {
             error={!!startDateError}
             helperText={startDateError}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomTextField
             label="End Date"
             type="date"
@@ -238,8 +247,8 @@ function CreateCampaignForm() {
             error={!!endDateError}
             helperText={endDateError}
           />
-        </Grid2>
-        <Grid2 item>
+        </StyledGridItem>
+        <StyledGridItem item>
           <CustomTextField
             label="Image/Video URL"
             type="text"
@@ -248,7 +257,7 @@ function CreateCampaignForm() {
             error={!!imageVideoURLError}
             helperText={imageVideoURLError}
           />
-        </Grid2>
+        </StyledGridItem>
         <Grid2 item>
           <Button variant="contained" color="primary" type="submit">
             Create
