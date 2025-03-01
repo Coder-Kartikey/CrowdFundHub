@@ -1,118 +1,81 @@
 // filepath: client/src/components/LoginForm.jsx
-import { useState } from 'react';
-import { TextField, Button, Grid2, Typography, Alert } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {
+  TextField,
+  Button,
+  Grid,
+  Paper,
+  Typography,
+  Link,
+  Alert,
+} from '@mui/material';
+import { loginUser } from '../services/api'; // Import the loginUser function
 
-const StyledTextField = styled(TextField)({
-  marginBottom: '16px',
-});
-
-function LoginForm() {
+const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-  const [loginSuccess, setLoginSuccess] = useState(false);
-  const [loginError, setLoginError] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const navigate = useNavigate(); // Initialize useNavigate
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let isValid = true;
-
-    // Email validation
-    if (!email) {
-      setEmailError('Email is required');
-      isValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      setEmailError('Email is invalid');
-      isValid = false;
-    } else {
-      setEmailError('');
-    }
-
-    // Password validation
-    if (!password) {
-      setPasswordError('Password is required');
-      isValid = false;
-    } else {
-      setPasswordError('');
-    }
-
-    if (isValid) {
-      // Mock API call - Retrieve user data from local storage
-      const storedEmail = localStorage.getItem('userEmail');
-      const storedPassword = localStorage.getItem('userPassword');
-
-      if (email === storedEmail && password === storedPassword) {
-        // Generate a mock token
-        const mockToken = 'mockToken123';
-        localStorage.setItem('token', mockToken);
-
-        console.log('Login successful. Mock token:', mockToken);
-
-        // Reset the form and show success message
-        setEmail('');
-        setPassword('');
-        setLoginSuccess(true);
-        setLoginError('');
-
-        // Redirect to the home page
-        navigate('/');
-      } else {
-        setLoginError('Invalid credentials');
-      }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setError('');
+    try {
+      const data = await loginUser({ email, password });
+      // Assuming the backend returns a token upon successful login
+      const token = data.token;
+      localStorage.setItem('token', token); // Store the token in local storage
+      navigate('/'); // Redirect to the home page
+    } catch (error) {
+      setError(error.message || 'Invalid credentials');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Grid2 container spacing={2} direction="column" maxWidth="400px">
-        {/* <Grid2 item>
-          <Typography variant="h5">Login</Typography>
-        </Grid2> */}
-        <Grid2 item>
-          <StyledTextField
-            fullWidth
-            label="Email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            error={!!emailError}
-            helperText={emailError}
-          />
-        </Grid2>
-        <Grid2 item>
-          <StyledTextField
-            fullWidth
-            label="Password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            error={!!passwordError}
-            helperText={passwordError}
-          />
-        </Grid2>
-        <Grid2 item>
-          <Button variant="contained" color="primary" type="submit">
+    <Grid container justifyContent="center">
+      <Grid item xs={12} sm={8} md={6}>
+        <Paper elevation={3} sx={{ padding: 3 }}>
+          <Typography variant="h5" align="center" gutterBottom>
             Login
-          </Button>
-        </Grid2>
-        {loginSuccess && (
-          <Grid2 item>
-            <Alert severity="success">Login successful!</Alert>
-          </Grid2>
-        )}
-        {loginError && (
-          <Grid2 item>
-            <Alert severity="error">{loginError}</Alert>
-          </Grid2>
-        )}
-      </Grid2>
-    </form>
+          </Typography>
+          {error && <Alert severity="error">{error}</Alert>}
+          <form onSubmit={handleSubmit}>
+            <TextField
+              label="Email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              fullWidth
+              margin="normal"
+              required
+            />
+            <TextField
+              label="Password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              fullWidth
+              margin="normal"
+              required
+            />
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth
+              sx={{ mt: 2 }}
+            >
+              Login
+            </Button>
+          </form>
+          <Typography variant="body2" align="center" sx={{ mt: 2 }}>
+            Don't have an account? <Link href="/register">Register</Link>
+          </Typography>
+        </Paper>
+      </Grid>
+    </Grid>
   );
-}
+};
 
 export default LoginForm;

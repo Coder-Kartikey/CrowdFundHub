@@ -1,4 +1,5 @@
+// filepath: client/src/utils/auth.js
 export const isAuthenticated = () => {
   const token = localStorage.getItem('token');
-  return !!token; // Returns true if a token exists, false otherwise
+  return !!token;
 };

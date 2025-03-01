@@ -14,6 +14,11 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import RegistrationForm from './components/RegistrationForm';
+import LoginForm from './components/LoginForm';
+import PrivateRoute from './components/PrivateRoute';
+import Header from './components/Header'; // Import the Header component
+import ContactForm from './components/ContactForm'; // Import the ContactForm component
 
 const theme = createTheme({
   palette: {
@@ -42,10 +47,6 @@ const theme = createTheme({
   },
 });
 
-const PrivateRoute = ({ children }) => {
-  return isAuthenticated() ? children : <Navigate to="/login" />;
-};
-
 const ContentContainer = styled(Container)(({ theme }) => ({
   marginTop: theme.spacing(8), // Adjust this value as needed (8 = 64px by default)
   minHeight: 'calc(100vh - 64px)', // Ensure content takes up at least the viewport height minus the Navbar height
@@ -53,23 +54,23 @@ const ContentContainer = styled(Container)(({ theme }) => ({
 }));
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true); // Add loading state
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate content loading (replace with your actual loading logic)
     setTimeout(() => {
-      setIsLoading(false); // Set loading to false after a delay
-    }, 500); // Adjust the delay as needed
+      setIsLoading(false);
+    }, 500);
   }, []);
 
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Navbar />
+        <Header /> {/* Include the Header component */}
         <ContentContainer>
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Registration />} />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/register" element={<RegistrationForm />} />
+            <Route path="/contact" element={<ContactForm />} /> {/* Add the contact route */}
             <Route
               path="/"
               element={

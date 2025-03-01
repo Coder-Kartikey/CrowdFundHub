@@ -1,39 +1,65 @@
-// filepath: client/src/components/RegistrationForm.jsx
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import {
   TextField,
   Button,
   Grid,
   Paper,
   Typography,
-  Link,
   Alert,
 } from '@mui/material';
-import { registerUser } from '../services/api'; // Import the registerUser function
 
-const RegistrationForm = () => {
+const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate();
+  const [success, setSuccess] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError('');
+    setSuccess('');
 
-    if (password !== confirmPassword) {
-      setError('Passwords do not match');
+    // Basic client-side validation
+    if (!name || !email || !subject || !message) {
+      setError('Please fill in all fields');
+      return;
+    }
+
+    // Email format validation (basic)
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError('Please enter a valid email address');
       return;
     }
 
     try {
-      await registerUser({ name, email, password });
-      navigate('/login'); // Redirect to the login page after successful registration
+      const response = await fetch('http://localhost:4000/api/query', { // Replace with your backend URL
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSuccess('Your query has been submitted successfully!');
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+      } else {
+        setError(data.message || 'Failed to submit query');
+      }
     } catch (error) {
-      setError(error.message || 'Registration failed');
+      setError(error.message || 'Failed to submit query');
     }
   };
 
@@ -42,9 +68,10 @@ const RegistrationForm = () => {
       <Grid item xs={12} sm={8} md={6}>
         <Paper elevation={3} sx={{ padding: 3 }}>
           <Typography variant="h5" align="center" gutterBottom>
-            Register
+            Contact Us
           </Typography>
           {error && <Alert severity="error">{error}</Alert>}
+          {success && <Alert severity="success">{success}</Alert>}
           <form onSubmit={handleSubmit}>
             <TextField
               label="Name"
@@ -64,19 +91,19 @@ const RegistrationForm = () => {
               required
             />
             <TextField
-              label="Password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              label="Subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
               fullWidth
               margin="normal"
               required
             />
             <TextField
-              label="Confirm Password"
-              type="password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
+              label="Message"
+              multiline
+              rows={4}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               fullWidth
               margin="normal"
               required
@@ -88,16 +115,13 @@ const RegistrationForm = () => {
               fullWidth
               sx={{ mt: 2 }}
             >
-              Register
+              Submit
             </Button>
           </form>
-          <Typography variant="body2" align="center" sx={{ mt: 2 }}>
-            Already have an account? <Link href="/login">Login</Link>
-          </Typography>
         </Paper>
       </Grid>
     </Grid>
   );
 };
 
-export default RegistrationForm;
+export default ContactForm;

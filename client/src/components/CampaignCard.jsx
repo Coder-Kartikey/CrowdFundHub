@@ -59,7 +59,7 @@ function CampaignCard({ campaign }) {
         </Typography>
       </StyledCardContent>
       <CardActions>
-        <Button size="small" component={Link} to={`/campaign/${campaign.id}`}>
+        <Button size="small" component={Link} to={`/campaign/${campaign._id}`}>
           Learn More
         </Button>
       </CardActions>
